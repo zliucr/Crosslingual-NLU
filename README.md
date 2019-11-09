@@ -50,7 +50,7 @@ python main.py --exp_name lvm_refine_noise_clean_enes --exp_id 1 --bidirection -
 ```
 Train English system for Thai Adaptation
 ```
-python main.py --exp_name lvm_refine_noise_clean_enth --exp_id 2 --bidirection --freeze_emb --lvm --lvm_dim 100 --batch_size 32 --emb_file_en ./refine_emb/refine.en.align.en-th.vec --embnoise --clean_txt --early_stop 1
+python main.py --exp_name lvm_refine_noise_clean_enth --exp_id 1 --bidirection --freeze_emb --lvm --lvm_dim 100 --batch_size 32 --emb_file_en ./refine_emb/refine.en.align.en-th.vec --embnoise --clean_txt --early_stop 1
 ```
 
 ### Zero-shot Adaptation
