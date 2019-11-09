@@ -1,0 +1,157 @@
+INFO - 11/09/19 12:19:10 - 0:00:00 - ============ Initialized logger ============
+INFO - 11/09/19 12:19:10 - 0:00:00 - batch_size: 32
+                                     bidirection: True
+                                     clean_txt: True
+                                     crf: False
+                                     dropout: 0.1
+                                     dump_path: experiments/lvm_refine_noise_clean_enes/2
+                                     early_stop: 1
+                                     emb_dim: 300
+                                     emb_file_en: ./refine_emb/refine.en.align.en-es.vec
+                                     emb_file_es: ./emb/wiki.es.align.vec
+                                     emb_file_th: ./emb/wiki.th.align.vec
+                                     embnoise: True
+                                     epoch: 300
+                                     exp_id: 2
+                                     exp_name: lvm_refine_noise_clean_enes
+                                     freeze_emb: True
+                                     hidden_dim: 250
+                                     logger_filename: multilingual_dialogue.log
+                                     lr: 0.0005
+                                     lvm: True
+                                     lvm_dim: 100
+                                     n_layer: 2
+                                     num_intent: 12
+                                     num_slot: 24
+                                     optimizer: Adam
+                                     trans_lang: es
+                                     transfer: False
+INFO - 11/09/19 12:19:10 - 0:00:00 - The experiment will be stored in experiments/lvm_refine_noise_clean_enes/2
+                                     
+INFO - 11/09/19 12:19:10 - 0:00:00 - ============ Preprocess en data ============
+INFO - 11/09/19 12:19:11 - 0:00:01 - cleaning data on en language
+INFO - 11/09/19 12:19:16 - 0:00:06 - ============ Preprocess es data ============
+INFO - 11/09/19 12:19:17 - 0:00:07 - cleaning data on es language
+INFO - 11/09/19 12:19:17 - 0:00:07 - ============ Preprocess th data ============
+INFO - 11/09/19 12:19:17 - 0:00:07 - cleaning data on th language
+INFO - 11/09/19 12:19:17 - 0:00:08 - embedding: 4162 x 300
+INFO - 11/09/19 12:19:17 - 0:00:08 - Loading embedding file: ./refine_emb/refine.en.align.en-es.vec
+INFO - 11/09/19 12:19:18 - 0:00:08 - Pre-train: 4081 / 4162 (0.98)
+INFO - 11/09/19 12:19:22 - 0:00:12 - ============== epoch 0 ==============
+INFO - 11/09/19 12:22:56 - 0:03:46 - Finish training epoch 0. Intent loss: 0.6732. Slot loss: 0.4579
+INFO - 11/09/19 12:22:56 - 0:03:46 - ============== Evaluate 0 ==============
+INFO - 11/09/19 12:22:57 - 0:03:47 - Best model has been saved to experiments/lvm_refine_noise_clean_enes/2/best_model.pth
+INFO - 11/09/19 12:22:57 - 0:03:47 - Intent ACC: 0.8718 (Best Acc: 0.8718). Slot F1: 88.6200. (Best F1: 88.6200)
+INFO - 11/09/19 12:22:57 - 0:03:47 - ============== epoch 1 ==============
+INFO - 11/09/19 12:26:43 - 0:07:33 - Finish training epoch 1. Intent loss: 0.2772. Slot loss: 0.1536
+INFO - 11/09/19 12:26:43 - 0:07:33 - ============== Evaluate 1 ==============
+INFO - 11/09/19 12:26:44 - 0:07:34 - Best model has been saved to experiments/lvm_refine_noise_clean_enes/2/best_model.pth
+INFO - 11/09/19 12:26:44 - 0:07:34 - Intent ACC: 0.9514 (Best Acc: 0.9514). Slot F1: 90.7921. (Best F1: 90.7921)
+INFO - 11/09/19 12:26:44 - 0:07:34 - ============== epoch 2 ==============
+INFO - 11/09/19 12:31:17 - 0:12:07 - Finish training epoch 2. Intent loss: 0.1550. Slot loss: 0.1249
+INFO - 11/09/19 12:31:17 - 0:12:07 - ============== Evaluate 2 ==============
+INFO - 11/09/19 12:31:18 - 0:12:09 - Best model has been saved to experiments/lvm_refine_noise_clean_enes/2/best_model.pth
+INFO - 11/09/19 12:31:18 - 0:12:09 - Intent ACC: 0.9658 (Best Acc: 0.9658). Slot F1: 92.6220. (Best F1: 92.6220)
+INFO - 11/09/19 12:31:18 - 0:12:09 - ============== epoch 3 ==============
+INFO - 11/09/19 12:35:27 - 0:16:17 - Finish training epoch 3. Intent loss: 0.1181. Slot loss: 0.1069
+INFO - 11/09/19 12:35:27 - 0:16:17 - ============== Evaluate 3 ==============
+INFO - 11/09/19 12:35:28 - 0:16:18 - Best model has been saved to experiments/lvm_refine_noise_clean_enes/2/best_model.pth
+INFO - 11/09/19 12:35:28 - 0:16:18 - Intent ACC: 0.9703 (Best Acc: 0.9703). Slot F1: 93.5154. (Best F1: 93.5154)
+INFO - 11/09/19 12:35:28 - 0:16:18 - ============== epoch 4 ==============
+INFO - 11/09/19 12:39:37 - 0:20:27 - Finish training epoch 4. Intent loss: 0.0972. Slot loss: 0.0983
+INFO - 11/09/19 12:39:37 - 0:20:27 - ============== Evaluate 4 ==============
+INFO - 11/09/19 12:39:38 - 0:20:28 - Best model has been saved to experiments/lvm_refine_noise_clean_enes/2/best_model.pth
+INFO - 11/09/19 12:39:38 - 0:20:29 - Intent ACC: 0.9782 (Best Acc: 0.9782). Slot F1: 93.8871. (Best F1: 93.8871)
+INFO - 11/09/19 12:39:38 - 0:20:29 - ============== epoch 5 ==============
+INFO - 11/09/19 12:44:04 - 0:24:54 - Finish training epoch 5. Intent loss: 0.0835. Slot loss: 0.0887
+INFO - 11/09/19 12:44:04 - 0:24:54 - ============== Evaluate 5 ==============
+INFO - 11/09/19 12:44:05 - 0:24:55 - No better model found (1/1)
+INFO - 11/09/19 12:44:05 - 0:24:55 - Intent ACC: 0.9766 (Best Acc: 0.9782). Slot F1: 93.6425. (Best F1: 93.8871)
+INFO - 11/09/19 12:44:05 - 0:24:55 - ============== Final Test ==============
+INFO - 11/09/19 12:44:05 - 0:24:55 - Loading best model from experiments/lvm_refine_noise_clean_enes/2/best_model.pth
+INFO - 11/09/19 12:44:08 - 0:24:58 - Best model has been saved to experiments/lvm_refine_noise_clean_enes/2/best_model.pth
+INFO - 11/09/19 12:44:08 - 0:24:58 - Intent ACC: 0.9789. Slot F1: 94.2546.
+INFO - 11/09/19 13:27:16 - 0:00:00 - ============ Initialized logger ============
+INFO - 11/09/19 13:27:16 - 0:00:00 - batch_size: 64
+                                     bidirection: True
+                                     clean_txt: True
+                                     crf: False
+                                     dropout: 0.1
+                                     dump_path: experiments/lvm_refine_noise_clean_enes/2
+                                     early_stop: 3
+                                     emb_dim: 300
+                                     emb_file_en: ./emb/wiki.en.align.vec
+                                     emb_file_es: ./refine_emb/refine.es.align.vec
+                                     emb_file_th: ./emb/wiki.th.align.vec
+                                     embnoise: False
+                                     epoch: 300
+                                     exp_id: 2
+                                     exp_name: lvm_refine_noise_clean_enes
+                                     freeze_emb: False
+                                     hidden_dim: 250
+                                     logger_filename: multilingual_dialogue.log
+                                     lr: 0.0005
+                                     lvm: True
+                                     lvm_dim: 100
+                                     n_layer: 2
+                                     num_intent: 12
+                                     num_slot: 24
+                                     optimizer: Adam
+                                     trans_lang: es
+                                     transfer: True
+INFO - 11/09/19 13:27:16 - 0:00:00 - The experiment will be stored in experiments/lvm_refine_noise_clean_enes/2
+                                     
+INFO - 11/09/19 13:27:16 - 0:00:00 - ============== Evaluate Zero-Shot on es ==============
+INFO - 11/09/19 13:27:16 - 0:00:00 - ============ Preprocess en data ============
+INFO - 11/09/19 13:27:17 - 0:00:02 - cleaning data on en language
+INFO - 11/09/19 13:27:23 - 0:00:08 - ============ Preprocess es data ============
+INFO - 11/09/19 13:27:23 - 0:00:08 - cleaning data on es language
+INFO - 11/09/19 13:27:24 - 0:00:08 - ============ Preprocess th data ============
+INFO - 11/09/19 13:27:24 - 0:00:09 - cleaning data on th language
+INFO - 11/09/19 13:27:24 - 0:00:09 - embedding: 2824 x 300
+INFO - 11/09/19 13:27:24 - 0:00:09 - Loading embedding file: ./refine_emb/refine.es.align.vec
+INFO - 11/09/19 13:27:25 - 0:00:09 - Pre-train: 2652 / 2824 (0.94)
+INFO - 11/09/19 13:27:25 - 0:00:09 - Loading best model from experiments/lvm_refine_noise_clean_enes/2/best_model.pth
+INFO - 11/09/19 13:27:30 - 0:00:15 - Intent ACC: 0.9046. Slot F1: 67.5471.
+INFO - 11/09/19 13:31:43 - 0:00:00 - ============ Initialized logger ============
+INFO - 11/09/19 13:31:43 - 0:00:00 - batch_size: 64
+                                     bidirection: True
+                                     clean_txt: True
+                                     crf: False
+                                     dropout: 0.1
+                                     dump_path: experiments/lvm_refine_noise_clean_enes/best
+                                     early_stop: 3
+                                     emb_dim: 300
+                                     emb_file_en: ./emb/wiki.en.align.vec
+                                     emb_file_es: ./refine_emb/refine.es.align.vec
+                                     emb_file_th: ./emb/wiki.th.align.vec
+                                     embnoise: False
+                                     epoch: 300
+                                     exp_id: best
+                                     exp_name: lvm_refine_noise_clean_enes
+                                     freeze_emb: False
+                                     hidden_dim: 250
+                                     logger_filename: multilingual_dialogue.log
+                                     lr: 0.0005
+                                     lvm: True
+                                     lvm_dim: 100
+                                     n_layer: 2
+                                     num_intent: 12
+                                     num_slot: 24
+                                     optimizer: Adam
+                                     trans_lang: es
+                                     transfer: True
+INFO - 11/09/19 13:31:43 - 0:00:00 - The experiment will be stored in experiments/lvm_refine_noise_clean_enes/best
+                                     
+INFO - 11/09/19 13:31:43 - 0:00:00 - ============== Evaluate Zero-Shot on es ==============
+INFO - 11/09/19 13:31:43 - 0:00:00 - ============ Preprocess en data ============
+INFO - 11/09/19 13:31:44 - 0:00:02 - cleaning data on en language
+INFO - 11/09/19 13:31:50 - 0:00:07 - ============ Preprocess es data ============
+INFO - 11/09/19 13:31:50 - 0:00:08 - cleaning data on es language
+INFO - 11/09/19 13:31:51 - 0:00:08 - ============ Preprocess th data ============
+INFO - 11/09/19 13:31:51 - 0:00:08 - cleaning data on th language
+INFO - 11/09/19 13:31:51 - 0:00:09 - embedding: 2824 x 300
+INFO - 11/09/19 13:31:51 - 0:00:09 - Loading embedding file: ./refine_emb/refine.es.align.vec
+INFO - 11/09/19 13:31:52 - 0:00:09 - Pre-train: 2652 / 2824 (0.94)
+INFO - 11/09/19 13:31:52 - 0:00:09 - Loading best model from experiments/lvm_refine_noise_clean_enes/best/best_model.pth
+INFO - 11/09/19 13:31:57 - 0:00:15 - Intent ACC: 0.9046. Slot F1: 67.5471.
