@@ -2,7 +2,7 @@
 import torch
 import torch.nn as nn
 
-from sklearn.metrics import accuracy_score, f1_score
+from sklearn.metrics import accuracy_score
 from .conll2002_metrics import *
 
 import numpy as np
@@ -69,7 +69,6 @@ class EvaluateTransfer(object):
         y2_list = np.concatenate(y2_list, axis=0)
         # evaluate
         intent_acc = accuracy_score(y1_list, intent_pred)
-        # slot_f1 = f1_score(y2_list, slot_pred, average="macro")
 
         y2_list = list(y2_list)
         slot_pred = list(slot_pred)

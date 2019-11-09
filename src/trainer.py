@@ -7,7 +7,7 @@ from tqdm import tqdm
 import logging
 import os
 
-from sklearn.metrics import accuracy_score, f1_score
+from sklearn.metrics import accuracy_score
 from .conll2002_metrics import *
 
 logger = logging.getLogger()
@@ -122,7 +122,6 @@ class DialogTrainer(object):
         intent_acc = accuracy_score(y1_list, intent_pred)
 
         # calcuate f1 score
-        # slot_f1 = f1_score(y2_list, slot_pred, average="macro")
         y2_list = list(y2_list)
         slot_pred = list(slot_pred)
         lines = []

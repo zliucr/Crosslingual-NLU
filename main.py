@@ -8,8 +8,6 @@ from src.transfer import EvaluateTransfer
 
 import numpy as np
 from tqdm import tqdm
-
-import pickle
 import os
 
 def train(params, lang="en"):
