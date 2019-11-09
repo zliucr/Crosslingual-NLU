@@ -6,7 +6,7 @@
 
 This repository is for the paper accepted in EMNLP 2019: [Zero-shot Cross-lingual Dialogue Systems with Transferable Latent Variables](https://www.aclweb.org/anthology/D19-1129.pdf)
 
-This code has been written using PyTorch. If you use any source codes or ideas included in this toolkit in your work, please cite the following papers.
+This code has been written using PyTorch. If you use any source codes or ideas included in this repository for your work, please cite the following paper.
 <pre>
 @inproceedings{liu2019zero,
   title={Zero-shot Cross-lingual Dialogue Systems with Transferable Latent Variables},
