@@ -2,7 +2,7 @@
 
 <img src="img/pytorch-logo-dark.png" width="10%"> [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-<img align="right" src="img/HKUST.jpg" width="12%">
+<img align="right" src="img/HKUST.jpg" width="15%">
 
 This repository is for the paper accepted in EMNLP 2019: [Zero-shot Cross-lingual Dialogue Systems with Transferable Latent Variables](https://www.aclweb.org/anthology/D19-1129.pdf)
 
@@ -24,7 +24,7 @@ Despite the surging demands for multilingual task-oriented dialog systems (e.g.,
 We evaluate our system on multilingual task-oriented dialogue dataset Published by [Schuster et al. (2019)](https://www.aclweb.org/anthology/N19-1380.pdf), which contains Dialog Natural Language Understanding data in English, Spanish and Thai. We put this dataset in the data folder under this repository.
 
 ## Model Architecture
-<img src="img/model_structure.jpg" width=70%/>
+<img src="img/model_structure.jpg" width=50%/>
 
 ## Setup
 - Install PyTorch (Tested in PyTorch 0.4.0 and Python 3.6)

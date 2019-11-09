@@ -8,7 +8,6 @@ import random
 from datetime import timedelta
 
 import numpy as np
-import matplotlib.pyplot as plt
 from tqdm import tqdm
 
 def init_experiment(params, logger_filename):
@@ -135,7 +134,7 @@ def load_embedding(vocab, emb_dim, emb_file):
     return embedding
 
 def add_special_embedding(emb_path1, emb_path2, emb_path3):
-    special_token_list = ["<TIME>", "<LAST>", "<DATA>", "<LOCATION>", "<NUMBER>"]
+    special_token_list = ["<TIME>", "<LAST>", "<DATE>", "<LOCATION>", "<NUMBER>"]
     spe_tok_emb_dict = {}
     emb_dim = 300
     for spe_tok in special_token_list:
@@ -148,10 +147,10 @@ def add_special_embedding(emb_path1, emb_path2, emb_path3):
         for spe_tok in tqdm(special_token_list):
             random_emb_str = spe_tok_emb_dict[spe_tok]
             f.write(spe_tok + " " + random_emb_str + "\n")
-    # with open(emb_path2, "a+") as f:
-    #     for spe_tok in tqdm(special_token_list):
-    #         random_emb_str = spe_tok_emb_dict[spe_tok]
-    #         f.write(spe_tok + " " + random_emb_str + "\n")
+    with open(emb_path2, "a+") as f:
+        for spe_tok in tqdm(special_token_list):
+            random_emb_str = spe_tok_emb_dict[spe_tok]
+            f.write(spe_tok + " " + random_emb_str + "\n")
     with open(emb_path3, "a+") as f:
         for spe_tok in tqdm(special_token_list):
             random_emb_str = spe_tok_emb_dict[spe_tok]
@@ -167,12 +166,6 @@ def write_seed_dict(src_lang, tgt_lang, out_path):
 
     seed_dict = {"en": seed_words_en, "es": seed_words_es, "th":seed_words_th}
 
-    # if src_lang == "es" and tgt_lang == "en":
-    #     f = open(out_path, "w")
-    #     for seed_w_es, seed_w_en in zip(seed_words_es, seed_words_en):
-    #         f.write(seed_w_es + " " + seed_w_en + "\n")
-    #     f.close()
-    # else:
     with open("../refine_emb/"+src_lang+"2"+tgt_lang+"_dict_final.pkl", "rb") as f:
         dictionary = pickle.load(f)
     src_words = list(dictionary.keys())
@@ -216,9 +209,3 @@ def write_seed_dict(src_lang, tgt_lang, out_path):
     for seed_w_src, seed_w_tgt in zip(seed_words_src, seed_words_tgt):
         f.write(seed_w_src + " " + seed_w_tgt + "\n")
     f.close()
-
-# if __name__ == "__main__":
-    # add_special_embedding("../emb/wiki.en.align.vec", "../emb/wiki.es.align.vec", "../emb/wiki.th.align.vec")
-    # add_special_embedding("../refine_emb/refine.en.align.es-en.vec", "", "../refine_emb/refine.es.align.es-en.vec")
-    # write_seed_dict("th", "en", "../refine_emb/th2en_seed2.txt")
-    # write_seed_dict("es", "en", "../refine_emb/es2en_seed.txt")

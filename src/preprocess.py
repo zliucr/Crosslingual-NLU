@@ -271,24 +271,4 @@ def preprocess(data, lang, clean_txt=True):
     data_test_bin = binarize_data(data_test, intent_set, slot_set, vocab)
     data[lang] = {"train": data_train_bin, "eval": data_eval_bin, "test": data_test_bin, "vocab": vocab}
 
-if __name__ == "__main__":
-    # test preprocess function
-    data = {"en": {}, "es": {}, "th": {}}
-    """
-    en:
-        number of intent: 12
-        number of slot: 17
-    es:
-        number of intent: 12
-        number of slot: 12 (include all 9 slots in th and 1 slot that en does not have)
-    th:
-        number of intent: 10
-        number of slot: 9
-    in total:
-        number of intent: 12
-        number of slot: 18
-    """
-    preprocess(data, "es")
-    preprocess(data, "th")
-    preprocess(data, "en")
     

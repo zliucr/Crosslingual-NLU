@@ -1,13 +1,11 @@
 
 from config import get_params
-from src.utils import init_experiment, load_embedding, draw_distri
+from src.utils import init_experiment, load_embedding
 from src.loader import get_dataloader
 from src.lstm import Lstm, IntentPredictor, SlotPredictor
 from src.trainer import DialogTrainer
 from src.transfer import EvaluateTransfer
-from src.distributions import DistributionGenerator
 
-from sklearn.decomposition import PCA
 import numpy as np
 from tqdm import tqdm
 
